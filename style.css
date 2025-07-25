@@ -1,0 +1,26 @@
+.header {
+    background-color: #cfcfe9;
+    color: rgb(56, 56, 116);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    border-style: ridge;
+    padding:50px;
+}
+.first-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact {
+    background-color: #cfcfe9;
+    color: rgb(56, 56, 116);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    border-style: ridge;
+    width: 275px;
+    padding: 50px;
+}
+.second-container {
+    display: flex;
+    justify-content: left;
+}
