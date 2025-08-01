@@ -4,12 +4,14 @@
   padding: 0;
 }
 
-body {
+main {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: rgb(185, 185, 192);
   color: #333;
   padding: 20px;
   min-height: 100vh;
+  height: 100%;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -128,18 +130,27 @@ footer {
   padding: 60px 20px;
   text-align: center;
   width: 100%;
-  margin-top: 60px;
 }
 
 #footer-title-container {
 display: flex;
 flex-direction: row;
-justify-content: center;
-padding: 80px;
+justify-content: flex-start;
+margin-bottom: 50px;
 }
 
 #footer-title {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+.footer-link-container {
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+}
+
+.footer-link {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @media (max-width: 600px) {
