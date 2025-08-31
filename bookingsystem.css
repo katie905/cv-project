@@ -409,6 +409,68 @@ body {
 }
 
 @media (max-width: 768px) {
+  #class-schedule {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #class-schedule table {
+    min-width: 0;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+  }
+
+  #class-schedule thead {
+    display: none;
+  }
+
+  #class-schedule tr {
+    display: block;
+    margin-bottom: 20px; 
+    background: white;
+    padding: 15px 15px 10px 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+
+  #class-schedule td {
+    display: block;
+    padding: 8px 8px 8px 120px; 
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    font-size: 15px;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  #class-schedule td:last-child {
+    border-bottom: none; 
+  }
+
+  #class-schedule td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 13px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  #class-schedule button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
   #gym-name-container h1 {
     font-size: 22px;
   }
@@ -419,69 +481,7 @@ body {
   }
 
   #booking-screen {
-    padding: 15px 10px;
-  }
-
-  #class-schedule {
-    max-width: 100vw;
-    padding: 0 10px;
-  }
-
-  #class-schedule table {
-    min-width: auto;
-    width: 100%;
-  }
-
-  #class-schedule table,
-  #class-schedule thead,
-  #class-schedule tbody,
-  #class-schedule th,
-  #class-schedule td,
-  #class-schedule tr {
-    display: block;
-  }
-
-  #class-schedule thead {
-    display: none;
-  }
-
-  #class-schedule tr {
-    margin-bottom: 10px;
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    padding: 10px;
-  }
-
-  #class-schedule td {
-    padding-top: 30px;
-    padding-left: 10px;
-    text-align: left;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    position: relative;
-    font-size: 14px;
-    word-wrap: break-word;
-    white-space: normal;
-  }
-
-  /* Position the label above the content */
-  #class-schedule td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    position: absolute;
-    left: 10px;
-    top: 8px;
-    white-space: nowrap;
-    font-size: 14px;
-  }
-
-  /* Full width and bigger tap target for buttons */
-  #class-schedule button {
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 16px;
-    padding: 10px 0;
+    padding: 10px 15px;
   }
 
   #btn,
