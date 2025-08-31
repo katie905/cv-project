@@ -360,6 +360,7 @@ body {
   max-width: 100%;
   overflow-x: auto;
   font-size: 16px;
+  -webkit-overflow-scrolling: touch;
 }
 
 #class-schedule table {
@@ -413,17 +414,22 @@ body {
   }
 
   #booking-title-container h2 {
-    font-size: 22px; 
+    font-size: 22px;
     text-align: center;
   }
 
   #booking-screen {
-    padding: 15px 10px; 
+    padding: 15px 10px;
   }
 
   #class-schedule {
-    max-width: 100vw; 
-    padding: 0 10px;  
+    max-width: 100vw;
+    padding: 0 10px;
+  }
+
+  #class-schedule table {
+    min-width: auto;
+    width: 100%;
   }
 
   #class-schedule table,
@@ -440,7 +446,7 @@ body {
   }
 
   #class-schedule tr {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
@@ -448,25 +454,31 @@ body {
   }
 
   #class-schedule td {
-    padding: 10px;
+    padding-top: 30px;
+    padding-left: 10px;
     text-align: left;
     border: none;
     border-bottom: 1px solid #ccc;
     position: relative;
-    font-size: 14px; 
+    font-size: 14px;
+    word-wrap: break-word;
+    white-space: normal;
   }
 
+  /* Position the label above the content */
   #class-schedule td::before {
     content: attr(data-label);
     font-weight: bold;
     position: absolute;
     left: 10px;
-    top: 10px;
+    top: 8px;
     white-space: nowrap;
+    font-size: 14px;
   }
 
+  /* Full width and bigger tap target for buttons */
   #class-schedule button {
-    width: 100%; 
+    width: 100%;
     box-sizing: border-box;
     font-size: 16px;
     padding: 10px 0;
