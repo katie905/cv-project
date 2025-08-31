@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+body {
+  background-color: rgb(43, 42, 42);
+  margin: 0;
+  font-family: "Fjalla One", sans-serif;
+}
+
+#gym-name-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 10px;
+  padding: 20px;
+}
+
+#gym-name-container h1 {
+  color: whitesmoke;
+  font-size: 28px;
+  margin-left: 10px;
+}
+
+#logo {
+  width: 50px;
+  height: auto;
+}
+
+#booking-title-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#booking-title-container h2 {
+  color: whitesmoke;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+#login-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  padding: 20px;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+  align-items: flex-start;
+}
+
+#login-form input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#login-screen h2,
+.input-text {
+  color: whitesmoke;
+  font-size: 18px;
+}
+
+#btn,
+#logout-btn {
+  width: 100%;
+  max-width: 200px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#btn:hover,
+#logout-btn:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+#booking-screen {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+
+#booking-screen h2,
+#booking-screen p {
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+#booking-confirmation,
+#booking-error,
+#login-error {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#booking-confirmation {
+  color: lightgreen;
+}
+
+#booking-error {
+  color: orange;
+}
+
+#login-error {
+  color: red;
+}
+
+#class-schedule {
+  color: whitesmoke;
+  margin: 40px auto;
+  max-width: 100%;
+  overflow-x: auto;
+  font-size: 16px;
+}
+
+#class-schedule table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 600px;
+}
+
+#class-schedule th,
+#class-schedule td {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+#class-schedule th {
+  background-color: #555;
+  color: white;
+}
+
+#class-schedule button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#class-schedule button:hover {
+  background-color: #218838;
+}
+
+#class-schedule button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #gym-name-container h1 {
+    font-size: 22px;
+  }
+
+  #booking-title-container h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  #class-schedule table,
+  #class-schedule thead,
+  #class-schedule tbody,
+  #class-schedule th,
+  #class-schedule td,
+  #class-schedule tr {
+    display: block;
+  }
+
+  #class-schedule thead {
+    display: none;
+  }
+
+  #class-schedule tr {
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+  }
+
+  #class-schedule td {
+    padding: 10px;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+  }
+
+  #class-schedule td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    white-space: nowrap;
+  }
+
+  #btn,
+  #logout-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}

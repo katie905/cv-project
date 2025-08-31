@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="CV of Katie Thomas, Aspiring Web Developer. View skills, experience, and contact info." />
+  <meta name="author" content="Katie Thomas" />
+  <title>Booking System</title>
+  <link rel="stylesheet" href="bookingsystem.css" />
+</head>
+
+<body>
+
+  <a href="index.html">Back</a>
+  
+  <div id="gym-name-container">
+    <img id="logo" src="heart-7834324_1280.jpg" alt="Totally Fitness Logo" />
+    <h1>Totally Fitness</h1>
+  </div>
+
+  <div id="booking-title-container">
+    <h2>Spin Class Bookings</h2>
+  </div>
+
+  <div id="login-screen">
+    <h2>Login</h2>
+    <div id="login-error" class="hidden"></div>
+    <form id="login-form">
+      <label class="input-text" for="username">Username:</label>
+      <input placeholder="testuser" type="text" id="username" required />
+
+      <label class="input-text" for="password">Password:</label>
+      <input placeholder="password123" type="password" id="password" required />
+
+      <button id="btn" type="submit">Login</button>
+    </form>
+
+    <div>
+      <p>(for purposes of testing use username = "testuser" and password = "password123")</p>
+    </div>
+  </div>
+
+  <div id="booking-screen">
+    <h2>Welcome to the Booking Dashboard!</h2>
+    <p>You have successfully logged in. Start booking your classes here:</p>
+
+    <div id="class-schedule">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Instructor</th>
+            <th>Spots Left</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="class-list">
+        </tbody>
+      </table>
+    </div>
+
+    <div id="booking-confirmation" class="hidden">
+      <p>✔️ You’ve successfully booked a spin class!<br>We will send confirmation of your booking to your email address.
+      </p>
+    </div>
+
+    <div id="booking-error" class="hidden">
+      <p>⚠️ You have already booked this class.</p>
+    </div>
+
+    <button id="logout-btn">Logout</button>
+  </div>
+
+
+  <script src="bookingsystem.js"></script>
+
+</body>
+
+</html>
